@@ -1,38 +1,172 @@
+.container {
+  position: absolute;
+  width: 55%;
+  height: 90vh;
+  left: 24%;
+  padding: 20px;  
+  margin-top: 3%;
+  background-image: url("./img/monitorFosforo.png");
+  background-size: cover;
+  /* border: 10px solid rgba(255, 255, 255, 0.1); */
+  border-radius: 20px;
+}
+
 .App {
-  text-align: center;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.containerMonitor{
+  padding-left: 5%;
+  padding-top: 1%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+  /* padding-left: 40px; */
+  margin-top: 30px;
+  display: block;
+  font-size: 23px;
+  color: rgb(108,212,158);
+  text-shadow: 0 0 3px rgb(108,212,158),0 0 5px green;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  visibility: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.fail .message {
+  margin-top: 30%;
+  margin-left: 10%;
+  margin-right: 10%;
+  visibility: visible;
+  color: rgb(108,212,158);
+  font-size: 50px;
+  border: 1px solid rgba(108, 212, 129,.9);
+  box-shadow: 0px 0px 1.5px 1.5px rgba(108,212,158,.8);
+}
+
+.buttonAboutContainer{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.buttonFailContainer{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.buttonFailContainer .buttonFail{
+  height: 3rem;
+  color: rgba(255, 255, 255, 0.25);
+  background-color: antiquewhite;
+  text-shadow: rgba(255,255,255,.15);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.about .description{
+  display: block;
+  visibility: visible;
+  font-size: 20px;
+  color: rgb(108,212,158);
+  text-shadow: 0 0 3px rgb(108,212,158),0 0 5px green;
+  font-family: monospace;
+  width: 45%;
+}
+
+.listExperience{
+  color: rgb(108,212,158);
+  text-shadow: 0 0 3px rgb(108,212,158),0 0 5px green;
+  font-size: 20px;
+  width: 100%;
+  margin-left: 3%;
+}
+
+.about span, ul{
+  line-height : 35px;
+  display: block;
+  visibility: visible;
+  font-size: 20px;
+  color: rgb(108,212,158);
+  text-shadow: 0 0 3px rgb(108,212,158),0 0 5px green;
+  font-family: monospace;
+  width: 90%;
+}
+
+@keyframes typing {
+  from {width: 0;
   }
   to {
-    transform: rotate(360deg);
+    visibility: visible;
   }
+}
+
+@keyframes blink {
+  0%{border-right: 3px solid rgb(108,212,158)}
+  50%{border-right: transparent}
+}
+
+@keyframes apear {
+  from{opacity: 0}
+  to{opacity: 100}
+}
+
+.firstText {
+  width: 12ch;
+  animation: typing 2s steps(12) forwards,
+  5 step-end .5s blink alternate backwards;
+}
+
+.secondText{
+  width: 19ch;
+  animation: typing 2.5s steps(19) forwards,
+  4 step-end .5s blink alternate backwards;
+  animation-delay: 2s;
+}
+
+/* .thirdText{
+  width: 42ch;
+  animation: typing 7s steps(42) forwards,
+  12 steps(500) .6s blink alternate backwards;
+  animation-delay: 7s;
+}
+
+.fourthText{
+  width: 21ch;
+  animation: typing 6s steps(21) forwards,
+  10 steps(500) .6s blink alternate backwards;
+  animation-delay: 14s;
+} */
+
+.fifthText{
+  width: 42ch;
+  animation: typing 4s steps(42) forwards,
+  7 step-end .6s blink alternate backwards;
+  animation-delay: 4.5s;
+}
+
+.sixthText{
+  width: 37ch;
+  animation: typing 5s steps(37) forwards,
+  infinite step-end .5s blink alternate;
+  animation-delay: 8.5s;
+}
+
+.pildors{
+  display: flex;
+  justify-content: space-around;
+}
+
+.pildors img{
+  margin-top: 30px;
+  opacity: 0;
+  animation: apear 2s forwards; 
+  animation-delay: 13.5s;
+}
+
+.fotoCv{
+  position: absolute;
+  border: 1px solid rgba(108,212,158);
+  top: 5%;
+  left: -35%;
+  width: 20%;
+  opacity: 60%;
 }
