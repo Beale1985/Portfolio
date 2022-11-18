@@ -3,15 +3,18 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 import fotoCv from "../img/fotoCvMatrix.png";
 import { Fade } from 'react-reveal';
+import MatrixEffect from "./MatrixEffect.js";
+import {AiOutlineLinkedin, AiOutlineGithub} from 'react-icons/ai';
 
 function About() {
   return (
+    <div className='container'>
+    <MatrixEffect className="matrixEffect" />
     <div className='containerMonitor about'>
-        <h1 className='description'>Sobre Mi</h1>
         <h1 className='description'>Full Stack Developer</h1>
         <span>En búsqueda laboral activa, con el objetivo de 
         integrar los conocimientos adquiridos y desarrollarme profesionalmente en un ambiente laboral interdisciplinario.
-        Apasionado por la tecnología.
+        Apasionado por la tecnología y el diseño.
         </span>
         <ul>
           <li>Teléfono: +54 11-6955-9766</li>
@@ -19,17 +22,26 @@ function About() {
           <li>Ciudad: Ciudad Autónoma de Bs. As. Argentina</li>
           <li>Freelance: Disponibilidad inmediata</li>
         </ul>
+        <div className='iconosContacto'>
+          <a className='linkAbout' href="https://www.linkedin.com/in/alexis-bello-571478160/" target="_blank" rel="noopener noreferrer">
+            <AiOutlineLinkedin />
+          </a>
+          <a className='linkAbout' href="https://github.com/Beale1985" target="_blank" rel="noopener noreferrer">
+            <AiOutlineGithub />
+          </a>
+        </div>
         <div className='buttonAboutContainer'>
         <Link to="/">
-            <button type="buttonAbout">Volver</button>
+            <button type="button" class="btn-neon">Volver</button>
         </Link>
-        <Link to="/experience">
-            <button type="buttonAbout">Cargar Experiencia</button>
+        <Link to="/education">
+            <button type="button" class="btn-neon">Cargar Estudios</button>
         </Link>
         </div>
         <Fade className='containerFotoCv'>
-          <img className='fotoCv' src={fotoCv}></img>
+          <img className='fotoCv' src={fotoCv} alt="FotoCv"></img>
         </Fade>
+    </div>
     </div>
   )
 }

@@ -1,12 +1,12 @@
 import React from 'react';
-import pastillaRoja from "../img/pastillaRoja.png";
-import pastillaAzul from "../img/pastillaAzul.png";
 import { HashLink } from 'react-router-hash-link';
+import MatrixEffect from "./MatrixEffect.js"
 import '../App.css';
 
 function Home() {
 return (
-    <div className='containerMonitor'>
+    <div className='containerHome'>
+        <MatrixEffect />
         <h1 className='firstText'>¡Hola Mundo!</h1>
         <h1 className='secondText'>Mi nombre es Alexis</h1>
         <h1 className='fifthText'>elije la pildora azul si quieres conocerme</h1>
@@ -14,10 +14,10 @@ return (
         <br></br>
         <div className='pildors'>
         <HashLink smooth to={"/about" }>
-            <img src={pastillaAzul} style={{width:"150px"}} alt="Pastilla Azul" />
+            <button type="button" class="btn-neon-blue"></button>
         </HashLink>
-        <HashLink smooth to={"/fail" }>   
-            <img src={pastillaRoja} style={{width:"150px"}} alt="Pastilla Azul" />
+        <HashLink smooth to={"/fail" }> 
+            <button type="button" class="btn-neon-red"></button>  
         </HashLink> 
         </div>
     </div>
