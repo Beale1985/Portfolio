@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import fotoCv from "../img/fotoCvMatrix.png";
-import { Fade } from 'react-reveal';
 import MatrixEffect from "./MatrixEffect.js";
 import {AiOutlineLinkedin, AiOutlineGithub} from 'react-icons/ai';
 
@@ -38,9 +37,9 @@ function About() {
             <button type="button" class="btn-neon">Cargar Estudios</button>
         </Link>
         </div>
-        <Fade className='containerFotoCv'>
+        <div className='containerFotoCv'>
           <img className='fotoCv' src={fotoCv} alt="FotoCv"></img>
-        </Fade>
+        </div>
     </div>
     </div>
   )
